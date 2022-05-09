@@ -11,11 +11,11 @@ import Result from './components/Result';
 import Admin from './components/Admin';
 import Home from './components/Home';
 
-import { Router, Switch, Route } from 'react-router-dom';
+import { HashRouter, Router, Switch, Route } from 'react-router-dom';
 import history from './history';
 
 ReactDOM.render(
-    <Router history = {history}>
+    <HashRouter>
         <Switch>
             <Route exact path = '/' component = {Home} />
             <Route exact path = '/AddCandidate' component = {AddCandidate} />
@@ -26,7 +26,7 @@ ReactDOM.render(
             <Route exact path = '/Result' component = {Result} />
             <Route exact path = '/Admin' component = {Admin} />
         </Switch>
-    </Router>,
+    </HashRouter>,
     document.getElementById('root')
 );
 
