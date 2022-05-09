@@ -8,7 +8,7 @@ const infuraAccessKey = process.env.INFURA_ACCESS_KEY;
 module.exports = {
    // See <http://truffleframework.com/docs/advanced/configuration>
    // to customize your Truffle configuration!
-      contracts_build_directory: path.join(__dirname, "client/src/contracts"),
+   contracts_build_directory: path.join(__dirname, "client/src/contracts"),
    networks: {
       development: {
          network_id: "*",
