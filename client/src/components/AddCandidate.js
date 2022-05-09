@@ -54,10 +54,10 @@ class AddCandidate extends Component {
     
     componentDidMount = async () => {
         // FOR REFRESHING PAGE ONLY ONCE -
-        if(!window.location.hash){
+        /*if(!window.location.hash){
           window.location = window.location + '#loaded';
           window.location.reload();
-        }
+        }*/
         try {
           // Get network provider and web3 instance.
           const web3 = await getWeb3();
