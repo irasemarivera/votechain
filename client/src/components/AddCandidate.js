@@ -54,14 +54,13 @@ class AddCandidate extends Component {
     
     componentDidMount = async () => {
         // FOR REFRESHING PAGE ONLY ONCE -
-        /*if(!window.location.hash){
+        if(!window.location.hash.includes("#loaded")){
           window.location = window.location + '#loaded';
           window.location.reload();
-        }*/
+        }
         try {
           // Get network provider and web3 instance.
           const web3 = await getWeb3();
-    
           // Use web3 to get the user's accounts.
           const accounts = await web3.eth.getAccounts();
     
@@ -95,7 +94,7 @@ class AddCandidate extends Component {
           return (
             <div className = "CandidateDetails">
               <div className = "CandidateDetails-title">
-                <h1>Loading Web3, accounts, and contract...</h1>;
+                <h1>Loading Web3, accounts, and contract...</h1>
               </div>
               {this.state.isOwner ? <NavigationAdmin/>: <Navigation/>}
             </div>

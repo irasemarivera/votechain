@@ -24,7 +24,7 @@ class VerifyVoter extends Component {
 
   componentDidMount = async () => {
     // FOR REFRESHING PAGE ONLY ONCE -
-    if(!window.location.hash){
+    if(!window.location.hash.includes("#loaded")){
       window.location = window.location + '#loaded';
       window.location.reload();
     }
